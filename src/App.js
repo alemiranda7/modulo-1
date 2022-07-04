@@ -5,16 +5,18 @@ import Produtos from './Components/Produtos'
 
 const App = () => {
     
-    // let pagina = Home
-    // if(pagina === Home){
-    //     return window.location./
-    // }
+    let Pagina = Produtos
+    const {pathname} = window.location
+    if (pathname === '/produtos'){
+        Pagina = Produtos
+    }if (pathname === '/'){
+        Pagina = Home
+    }
 
     return (
         <>
             <Header />
-            <Home />
-            <Produtos />
+            <Pagina />   
         </>
     )
 }

@@ -6,7 +6,7 @@ const Home = () => {
     <>
         <section>
             <Titulo titulo='Home'/>
-            <p>corpo do texto</p>
+            <p>Essa é a pagina da home.</p>
         </section>
     </>
   )

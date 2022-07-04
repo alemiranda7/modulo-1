@@ -1,12 +1,19 @@
 import React from 'react'
+import Produto from './Produto'
 import Titulo from './Titulo'
 
 const Produtos = () => {
+
+  const produtos = [
+    {nome: 'Notebook', propriedades: ['16gb ram', '512gb']},
+    {nome: 'Smartphone', propriedades: ['2gb ram', '128gb']}
+  ]
+
   return (
     <>
         <section>
             <Titulo titulo='Produtos'/>
-            <p>corpo do texto agora dos produtos</p>
+            {produtos.map((produto) => (<Produto key={produto.nome} {...produto} />))}
         </section>
     </>
   )
